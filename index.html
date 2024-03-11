@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+#output {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    display: block;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.copy-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Form</title>
+    <script>
+function copyToClipboard() {
+    var text = document.getElementById('output').innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        alert('Copied to clipboard!');
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+</script>
+
 </head>
 <body>
     <h1>Interactive Data Layer Form</h1>
     <p>Complete the form and you will be given a data layer push. Refresh this page for another configuration.</p>
     <script src="script.js"></script> <!-- If your JS code is in a separate file -->
+    <div>
+    <div id="output">Generated dataLayer push object:</div>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+</div>
 </body>
 </html>
