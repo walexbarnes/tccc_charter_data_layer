@@ -46,6 +46,7 @@
         }
     });
 
-    console.log("Generated dataLayer push object:", eventData);
+    // Display the final dataLayer object in an alert pop-up
+    alert("Generated dataLayer push object:\n" + JSON.stringify(eventData, null, 2));
     dataLayer.push(eventData);
 })();
