@@ -50,7 +50,7 @@
                 "Is the element interaction a link that takes the user somewhere? (Y/N)",
                 ["Y", "N"]
             );
-            if (isLink.toUpperCase() === "Y") {
+            if (isLink.toUpperCase() === "1") {
                 var linkURL = prompt("What is the URL where the link takes the user?");
                 eventData.child_ux_element_link = linkURL;
             } else {
