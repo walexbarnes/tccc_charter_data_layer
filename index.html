@@ -38,7 +38,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Form</title>
-    <script>
+
+
+</head>
+<body>
+    <h1>Interactive Data Layer Form</h1>
+    <p>Complete the form and you will be given a data layer push. Refresh this page for another configuration.</p>
+    <div>
+    <div id="output">Generated dataLayer push object:</div>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+</div>
+
+        <script>
 function copyToClipboard() {
     var text = document.getElementById('output').innerText;
     navigator.clipboard.writeText(text).then(function() {
@@ -49,14 +60,7 @@ function copyToClipboard() {
 }
 </script>
 
-</head>
-<body>
-    <h1>Interactive Data Layer Form</h1>
-    <p>Complete the form and you will be given a data layer push. Refresh this page for another configuration.</p>
-    <script src="script.js"></script> <!-- If your JS code is in a separate file -->
-    <div>
-    <div id="output">Generated dataLayer push object:</div>
-    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
-</div>
+        <script src="script.js"></script> <!-- If your JS code is in a separate file -->
+
 </body>
 </html>
