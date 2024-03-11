@@ -23,7 +23,7 @@
             user_action: userAction === "1" ? "interaction" : "virtual_page_view",
             user_action_detail: "",
             ux_element: "",
-            child_element_text: "",
+            child_ux_element_text: "",
             child_ux_element_link: ""
         };
 
@@ -44,7 +44,7 @@
             eventData.ux_element = ["button", "header", "footer", "video", "survey", "form", "image", "carousel", "hyperlink", "accordion", "tab", "modal", "input field", "radio buttons", "checkbox", "social share", "search", "other"][parseInt(elementType) - 1];
 
             var elementText = prompt("What best describes the text of the clicked element?");
-            eventData.child_element_text = elementText;
+            eventData.child_ux_element_text = elementText;
 
             var isLink = promptWithValidation(
                 "Is the element interaction a link that takes the user somewhere? (Y/N)",
