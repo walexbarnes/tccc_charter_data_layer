@@ -66,7 +66,7 @@
         });
 
         // Output to HTML
-        document.getElementById('output').innerText = "Generated dataLayer push object:\n" + JSON.stringify(eventData, null, 2);
+        document.getElementById('output').innerText = "dataLayer.push(" + JSON.stringify(eventData, null, 2) + ");";
         dataLayer.push(eventData);
     } catch (error) {
         alert("Please refresh the page to start over because you made a mistake.");
